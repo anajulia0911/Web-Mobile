@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #F0F0F0;
+            text-align: center;
+        }
+        .result {
+            margin-top: 10px;
+        }
+        h1 {
+            font-family: Arial, sans-serif;
+            background-color: #FFC416;
+            border: 1px solid #FFC416;
+            padding: 10px;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+        h2 {
+            font-family: Arial, sans-serif;
+            background-color: #F0F0F0;
+            border: 1px solid #FFC416;
+            padding: 10px;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        p {
+            font-family: Arial, sans-serif;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Métodos sort, map, reduce e filter em JavaScript</h1>
+
+    <div id="sortResult" class="result"></div>
+    <div id="mapResult" class="result"></div>
+    <div id="reduceResult" class="result"></div>
+    <div id="filterResult" class="result"></div>
+
+    <script>
+        // Usando sort
+        const numeros = [44, 14, 200, 9, 18];
+        // Em ordem crescente
+        const crescente = [...numeros].sort((a, b) => a - b);
+        // Em ordem decrescente
+        const decrescente = [...numeros].sort((a, b) => b - a);
+
+
+        document.getElementById('sortResult').innerHTML = `
+            <h2>Ultilizando sort:</h2>
+            <p>Original: ${numeros.join(', ')}</p>
+            <p>Crescente: ${crescente.join(', ')}</p>
+            <p>Decrescente: ${decrescente.join(', ')}</p>
+        `;
+
+
+        // Usando map para multiplicar cada número por 2
+        const multiplicados = numeros.map(num => num * 2);
+        // Usando map para transformar cada número em string
+        const comoStrings = numeros.map(num => num.toString());
+
+
+        document.getElementById('mapResult').innerHTML = `
+            <h2>Resultado do map:</h2>
+            <p>Original: ${numeros.join(', ')}</p>
+            <p>Multiplicados por 2: ${multiplicados.join(', ')}</p>
+            <p>Como strings: ${comoStrings.join(', ')}</p>
+        `;
+
+        // Exemplo de uso do reduce
+        const numerosReduce = [1, 2, 3, 4, 5];
+        const soma = numerosReduce.reduce((acumulador, atual) => acumulador + atual, 0);
+
+        document.getElementById('reduceResult').innerHTML = `
+            <h2>Resultado do reduce:</h2>
+            <p>Números: ${numerosReduce.join(', ')}</p>
+            <p>O reduce soma os números e o resultado é: ${soma}</p>
+        `;
+
+        // Exemplo de uso do filter
+        const idades = [15, 25, 35, 45, 55];
+        const maioresDeIdade = idades.filter(idade => idade >= 18);
+
+        document.getElementById('filterResult').innerHTML = `
+            <h2>Resultado do filter:</h2>
+            <p>Idades: ${idades.join(', ')}</p>
+            <p>Após usar o filter (idades maiores ou iguais a 18), o resultado é: ${maioresDeIdade.join(', ')}</p>
+        `;
+    </script>
+</body>
+</html>
