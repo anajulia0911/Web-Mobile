@@ -43,11 +43,13 @@
     <div id="mapResult" class="result"></div>
     <div id="reduceResult" class="result"></div>
     <div id="filterResult" class="result"></div>
+    <div id="spreadResult" class="result"></div>
 
     <script>
-        // Usando sort
+        
         const numeros = [44, 14, 200, 9, 18];
-        // Em ordem crescente
+
+        // Usando sort em ordem crescente
         const crescente = [...numeros].sort((a, b) => a - b);
         // Em ordem decrescente
         const decrescente = [...numeros].sort((a, b) => b - a);
@@ -93,6 +95,20 @@
             <p>Idades: ${idades.join(', ')}</p>
             <p>Após usar o filter (idades maiores ou iguais a 18), o resultado é: ${maioresDeIdade.join(', ')}</p>
         `;
+
+        // Exemplo de uso do spread
+        const numeros1 = [1, 2, 3];
+        const resultadonumeros = [...numeros1, 8, 23, 72];
+        console.log(resultadonumeros); // [1, 2, 3, 4, 5]
+
+        document.getElementById('spreadResult').innerHTML = `
+            <h2>Resultado do spread:</h2>
+            <p>array: ${numeros1.join()}</p>
+            <p>Após usar o spread, o novo array criado é: ${resultadonumeros.join()}</p>
+        `;
+        
+
+
     </script>
 </body>
 </html>
