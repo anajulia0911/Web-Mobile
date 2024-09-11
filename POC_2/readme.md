@@ -1,4 +1,5 @@
 🚀 JavaScript Array Methods: sort, map, reduce, filter, e spread
+
 Bem-vindo ao repositório JavaScript Array Methods! 🎉 Este projeto é dedicado a ensinar conceitos básicos dos métodos mais usados para manipulação de arrays no JavaScript. O objetivo é oferecer à comunidade um recurso educativo gratuito e acessível para quem deseja aprender ou aprimorar suas habilidades em JavaScript.
 
 📚 Métodos Abordados
