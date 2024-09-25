@@ -30,16 +30,46 @@ A página estática inclui demonstrações  das seguintes propriedades Flexbox:<
     display: flex;
 }
 ```
-
-
 * flex-direction
+  ```
+  .column {
+	min-height: 200px;
+	flex-direction: column;
+}
+```
 * flex-whrap
-* flex-flow
-* justfy-content
-* align-itens
-* align-content
+```
+.wrap {
+	flex-wrap: wrap;
+}
 
-Flex Item
+```
+* flex-flow
+```
+.row-wrap {
+	flex-flow: row wrap;
+}
+```
+* justfy-content
+```
+.flex-center {
+	justify-content: center;
+}
+```
+* align-itens
+```
+.stretch {
+	align-items: stretch;
+}
+```
+* align-content
+```
+.align-space-around {
+	align-content: space-around;
+}
+```
+
+<h1>Flex Item</h1>
 * flex-grow
 ```
 .basis-grow {
@@ -72,6 +102,7 @@ flex-shrink: 1;
 ```
 * align-self
 
+```
 ```
 .flex-end {
 	align-self: flex-end;
