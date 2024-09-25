@@ -22,7 +22,7 @@
 <h2>* Cada seção contém uma descrição da propriedade, valores possíveis e um exemplo visual.
 A página estática inclui demonstrações  das seguintes propriedades Flexbox:</h2>
 
-<h2>Flex Container</h2>h2>
+<h2>Flex Container</h2>
   
 * display: flex
 ```
@@ -30,6 +30,8 @@ A página estática inclui demonstrações  das seguintes propriedades Flexbox:<
     display: flex;
 }
 ```
+
+
 * flex-direction
 * flex-whrap
 * flex-flow
@@ -39,8 +41,39 @@ A página estática inclui demonstrações  das seguintes propriedades Flexbox:<
 
 Flex Item
 * flex-grow
+```
+.basis-grow {
+	flex-grow: 1;
+}
+```
 * flex-basis
+```
+.basis-auto {
+	flex-basis: auto;
+}
+```
 * flex-shrink
+```
+.shrink-1{
+flex-shrink: 1;
+}
+```
 * flex
-* order 
+```
+.flexx {
+	display: flex;
+}
+* order
+```
+}
+.order1 {
+	order: 1;
+}
+```
 * align-self
+
+```
+.flex-end {
+	align-self: flex-end;
+}
+```
